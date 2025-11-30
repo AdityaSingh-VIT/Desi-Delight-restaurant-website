@@ -2,7 +2,7 @@ Desi Delight - Royal Indian Restaurant
 
 A modern, responsive website for an authentic Indian restaurant featuring royal-themed design and seamless user experience.
 🌐 Live Demo
-Visit the live website: https://project-group-27.netlify.app/
+Visit the live website:https://group-27-vitb.netlify.app/
 📋 Project Overview
 Desi Delight is a fully functional restaurant website that showcases authentic Indian cuisine with a royal touch. The website features a modern design with elegant purple and gold color scheme, responsive layout, and interactive elements.
 🚀 Features
