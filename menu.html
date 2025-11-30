@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Desi Delight </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Desi Delight </h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h2>Our Menu</h2>
+        <div class="menu-categories">
+            <button class="category-btn active" onclick="filterMenu('all')">All Items</button>
+            <button class="category-btn" onclick="filterMenu('appetizers')">Appetizers</button>
+            <button class="category-btn" onclick="filterMenu('mains')">Main Courses</button>
+            <button class="category-btn" onclick="filterMenu('desserts')">Desserts</button>
+            <button class="category-btn" onclick="filterMenu('drinks')">Drinks</button>
+        </div>
+        
+        <div class="menu-items" id="menu-items">
+            <!-- Menu items loaded by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+        <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button onclick="closeCart()">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items loaded by JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: ₹<span id="cart-total">0.00</span></p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
+</body>
+</html>

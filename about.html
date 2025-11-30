@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Desi Delight</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional Royal Styles for About Page */
+        .about-hero {
+            background: linear-gradient(135deg, rgba(74, 44, 141, 0.9) 0%, rgba(44, 26, 77, 0.9) 100%), url('images/about-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+            margin-bottom: 4rem;
+            border-bottom: 4px solid #d4af37;
+        }
+
+        .about-hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            color: #f8f6ff;
+        }
+
+        .about-hero-content p {
+            font-size: 1.5rem;
+            color: #e6d8ff;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .about-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(44, 26, 77, 0.1);
+            border: 2px solid #e6d8ff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #d4af37, #4a2c8d);
+        }
+
+        .about-section h2 {
+            color: #4a2c8d;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #d4af37;
+        }
+
+        .about-section p {
+            color: #2c1a4d;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .story-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 3px solid #d4af37;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .story-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, #f8f6ff 0%, #e6d8ff 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #d4af37;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(74, 44, 141, 0.2);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .value-card h4 {
+            color: #4a2c8d;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: #6b4caf;
+            font-size: 1rem;
+        }
+
+        .team-section {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid #e6d8ff;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+            box-shadow: 0 15px 35px rgba(74, 44, 141, 0.2);
+        }
+
+        .member-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid #d4af37;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4a2c8d, #6b4caf);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4af37;
+            font-size: 2.5rem;
+        }
+
+        .team-member h4 {
+            color: #4a2c8d;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member .role {
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .team-member p {
+            color: #6b4caf;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .royal-badge {
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            color: #2c1a4d;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 1rem 0;
+            border: 2px solid #4a2c8d;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #4a2c8d 0%, #2c1a4d 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            text-align: center;
+            border: 3px solid #d4af37;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: #e6d8ff;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-section {
+                padding: 2rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Desi Delight</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>Our Royal Story</h1>
+            <p>Where Tradition Meets Excellence in Every Bite</p>
+            <div class="royal-badge">Since 1980</div>
+        </div>
+    </section>
+
+    <div class="about-container">
+        <!-- Welcome Section -->
+        <section class="about-section">
+            <h2>Welcome to Desi Delight</h2>
+            <p>Welcome to <strong>Desi Delight</strong>, where traditional Indian flavors meet contemporary dining experience. Established in 2024, we take pride in serving authentic Indian cuisine prepared with the finest ingredients and traditional recipes passed down through generations.</p>
+            
+            <div class="story-grid">
+                <div>
+                    <p>Our journey began with a simple vision: to bring the authentic taste of India to food lovers around the world. Every dish we serve tells a story of rich cultural heritage and culinary excellence.</p>
+                    <p>We believe that dining is not just about food, but about creating memorable experiences that linger long after the last bite.</p>
+                </div>
+                <div class="story-image">
+                    <!-- Replace with actual image -->
+                    <img src="images/restaurant-interior.jpg" alt="Desi Delight Restaurant Interior" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="about-section">
+            <h2>Our Royal Beginning</h2>
+            <p><strong>Desi Delight</strong> was born from a passion for sharing the rich culinary heritage of India. Our head chef, trained in traditional Indian cooking techniques, brings generations of family recipes to your table.</p>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">👑</div>
+                    <h4>Royal Heritage</h4>
+                    <p>Recipes passed down through generations of royal kitchen traditions</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌿</div>
+                    <h4>Fresh Ingredients</h4>
+                    <p>Daily sourced fresh produce and authentic Indian spices</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">👨‍🍳</div>
+                    <h4>Expert Chefs</h4>
+                    <p>Master chefs trained in traditional cooking techniques</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💫</div>
+                    <h4>Excellence</h4>
+                    <p>Committed to delivering exceptional dining experiences</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <h2 style="color: #d4af37; margin-bottom: 2rem;">Our Royal Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Authentic Dishes</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15+</h3>
+                    <p>Expert Chefs</p>
+                </div>
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>Years Combined Experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="about-section">
+            <h2>Our Royal Philosophy</h2>
+            <p>We believe in using fresh, locally-sourced ingredients combined with authentic Indian spices to create dishes that tantalize your taste buds and warm your soul. Our philosophy is rooted in three core principles:</p>
+            
+            <div style="background: linear-gradient(135deg, #f8f6ff, #e6d8ff); padding: 2rem; border-radius: 15px; margin: 2rem 0; border-left: 4px solid #d4af37;">
+                <h4 style="color: #4a2c8d; margin-bottom: 1rem;">✨ Our Commitment</h4>
+                <p style="color: #2c1a4d; font-style: italic; margin: 0;">"To serve food that not only satisfies hunger but also nourishes the soul, creating moments of pure joy and connection through the universal language of taste."</p>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="about-section">
+            <h2>Meet Our Royal Team</h2>
+            <p>Our talented chefs and dedicated staff work tirelessly to ensure every dining experience is memorable. From our kitchen to your table, we're committed to excellence.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">👨‍🍳</div>
+                    <h4>Chef Rajesh Kumar</h4>
+                    <div class="role">Head Chef</div>
+                    <p>With over 15 years of experience in royal Indian cuisine, Chef Rajesh brings authentic flavors to every dish.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">👩‍🍳</div>
+                    <h4>Priya Sharma</h4>
+                    <div class="role">Sous Chef</div>
+                    <p>Specializing in traditional North Indian recipes, Priya ensures every spice blend is perfect.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">🍽️</div>
+                    <h4>Arun Patel</h4>
+                    <div class="role">Restaurant Manager</div>
+                    <p>Dedicated to providing exceptional service and creating unforgettable dining experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="about-section" style="text-align: center; background: linear-gradient(135deg, #f8f6ff, #e6d8ff);">
+            <h2>Experience Royal Dining</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Join us for an unforgettable culinary journey through the flavors of India</p>
+            <a href="reservations.html" class="cta-button" style="display: inline-block; text-decoration: none; margin: 1rem;">
+                Make Reservation
+            </a>
+            <a href="menu.html" class="cta-button" style="display: inline-block; text-decoration: none; margin: 1rem; background: linear-gradient(135deg, #4a2c8d, #2c1a4d);">
+                View Menu
+            </a>
+        </section>
+    </div>
+
+    <script>
+        // Update cart count
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = document.getElementById('cart-count');
+            if (cartCount) {
+                const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+                cartCount.textContent = totalItems;
+            }
+        });
+    </script>
+</body>
+</html>

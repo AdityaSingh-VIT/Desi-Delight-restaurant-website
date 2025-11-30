@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desi Delight - Indian Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Desi Delight </h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Desi Delight </h2>
+            <p>Authentic Indian Cuisine with a Modern Twist</p>
+            <button class="cta-button" onclick="location.href='reservations.html'">Book a Table</button>
+        </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="featured-dishes">
+        <h2>Our Specialties</h2>
+        <div class="dishes-grid" id="featured-dishes">
+            <!-- Dishes loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 1980 Desi Delight . All rights reserved.</p>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button onclick="closeCart()">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items loaded by JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: ₹<span id="cart-total">0.00</span></p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
