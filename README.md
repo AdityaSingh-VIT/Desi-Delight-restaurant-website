@@ -2,7 +2,7 @@ Desi Delight - Royal Indian Restaurant
 
 A modern, responsive website for an authentic Indian restaurant featuring royal-themed design and seamless user experience.
 🌐 Live Demo
-Visit the live website:https://group-27-vitb.netlify.app/
+Visit the live website:https://desidelightrestraunt.netlify.app/
 
 📋 Project Overview
 
