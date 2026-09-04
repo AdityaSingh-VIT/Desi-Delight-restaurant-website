@@ -108,7 +108,7 @@ const menuItems = [
         name: "Masala Chai", 
         category: "drinks", 
         price: 40, 
-        image: "https://spicestationsilverlake.com/wp-content/uploads/2023/03/An-Introduction-to-Masala-Chai-Indias-Spiced-Tea.jpg", 
+        image: "masala_chai.webp", 
         description: "Spiced Indian tea" 
     }
 ];
