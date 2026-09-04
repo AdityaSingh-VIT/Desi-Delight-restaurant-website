@@ -147,7 +147,7 @@ o	For PHP functionality, ensure your hosting supports PHP
 📞 Support
 
 For any issues or questions regarding the website, please contact:
-•	Email: info@desidelight.com
+•	Email: adityasingh.wow.gmail.com
 •	Phone: +91 9026314280
 •	WhatsApp: +91 94256 09559
 
